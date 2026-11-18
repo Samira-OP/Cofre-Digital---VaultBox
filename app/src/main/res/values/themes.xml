@@ -1,0 +1,28 @@
+<resources>
+
+    <style name="Base.Theme.CofreDigital" parent="Theme.Material3.Dark.NoActionBar">
+
+        <!-- Cores principais -->
+        <item name="colorPrimary">@color/purple_primary</item>
+        <item name="colorSecondary">@color/purple_secondary</item>
+
+        <!-- Fundo e superfícies -->
+        <item name="android:colorBackground">@color/background_main</item>
+        <item name="colorSurface">@color/background_card</item>
+
+        <!-- Textos -->
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorOnBackground">@color/text_primary</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+
+        <!-- Barra de status e navegação -->
+        <item name="android:statusBarColor">@color/background_main</item>
+        <item name="android:navigationBarColor">@color/background_main</item>
+        <item name="android:windowLightStatusBar">false</item>
+
+    </style>
+
+    <style name="Theme.CofreDigital" parent="Base.Theme.CofreDigital" />
+
+</resources>

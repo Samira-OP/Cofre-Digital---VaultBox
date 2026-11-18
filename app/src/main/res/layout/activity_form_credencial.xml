@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/background_main">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="24dp">
+
+        <!-- Identidade do aplicativo -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="8dp">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/escudoapp_telainicial"
+                android:scaleType="fitCenter"
+                android:contentDescription="Escudo do VaultBox"
+                android:layout_marginEnd="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="VaultBox"
+                android:textColor="@color/text_primary"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CADASTRO DE CREDENCIAIS CORPORATIVAS"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Card do formulário -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:background="@drawable/bg_card">
+
+            <TextView
+                android:id="@+id/txtTituloForm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Adicionar Nova Credencial"
+                android:textColor="@color/text_primary"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Preencha os dados de acesso corporativo para guardar no cofre do departamento."
+                android:textColor="@color/text_secondary"
+                android:textSize="13sp"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="20dp" />
+
+            <!-- Campo 1: Sistema ou Site -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sistema ou Aplicação *"
+                android:textColor="@color/text_primary"
+                android:textStyle="bold"
+                android:layout_marginBottom="6dp" />
+
+            <EditText
+                android:id="@+id/edtSistema"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:hint="Ex: AWS Cloud, SAP ERP, GitHub..."
+                android:inputType="textCapWords"
+                android:singleLine="true"
+                android:textColor="@color/text_primary"
+                android:textColorHint="@color/text_secondary"
+                android:backgroundTint="@color/purple_secondary"
+                android:padding="10dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Campo 2: Usuário ou E-mail -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Usuário ou E-mail Corporativo *"
+                android:textColor="@color/text_primary"
+                android:textStyle="bold"
+                android:layout_marginBottom="6dp" />
+
+            <EditText
+                android:id="@+id/edtUsuario"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:hint="Ex: usuario.ti@vaultbox.com"
+                android:inputType="text"
+                android:singleLine="true"
+                android:textColor="@color/text_primary"
+                android:textColorHint="@color/text_secondary"
+                android:backgroundTint="@color/purple_secondary"
+                android:padding="10dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Campo 3: Senha + Gerador de Senha -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:text="Senha de Acesso *"
+                    android:textColor="@color/text_primary"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/btnGerarSenha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="⚡ Gerar Senha Forte"
+                    android:textColor="@color/purple_secondary"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/edtSenhaForm"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:hint="Digite ou gere a senha de acesso"
+                android:inputType="text"
+                android:singleLine="true"
+                android:textColor="@color/text_primary"
+                android:textColorHint="@color/text_secondary"
+                android:backgroundTint="@color/purple_secondary"
+                android:padding="10dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Campo 4: Responsável -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Responsável pela Credencial *"
+                android:textColor="@color/text_primary"
+                android:textStyle="bold"
+                android:layout_marginBottom="6dp" />
+
+            <EditText
+                android:id="@+id/edtResponsavel"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:hint="Ex: Carlos Andrade (TI)"
+                android:inputType="textCapWords"
+                android:singleLine="true"
+                android:textColor="@color/text_primary"
+                android:textColorHint="@color/text_secondary"
+                android:backgroundTint="@color/purple_secondary"
+                android:padding="10dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Campo 5: Departamento -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Departamento *"
+                android:textColor="@color/text_primary"
+                android:textStyle="bold"
+                android:layout_marginBottom="6dp" />
+
+            <Spinner
+                android:id="@+id/spnCategoria"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="@drawable/bg_input"
+                android:paddingHorizontal="10dp"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Botões -->
+            <Button
+                android:id="@+id/btnSalvarCredencial"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:text="SALVAR CREDENCIAL"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:backgroundTint="@color/purple_primary"
+                android:layout_marginBottom="12dp" />
+
+            <Button
+                android:id="@+id/btnCancelarForm"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="CANCELAR"
+                android:textColor="@color/text_secondary"
+                android:backgroundTint="#302747" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

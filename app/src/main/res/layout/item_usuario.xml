@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_card"
+    android:padding="16dp"
+    android:layout_marginBottom="12dp">
+
+    <!-- Linha Superior: Nome e Badge do Perfil -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:id="@+id/txtUsuarioNome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@id/txtUsuarioPerfilBadge"
+            android:text="Nome do Colaborador"
+            android:textColor="@color/text_primary"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtUsuarioPerfilBadge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/bg_badge_category"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="4dp"
+            android:text="ADMIN GERAL"
+            android:textColor="@color/purple_secondary"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <!-- E-mail -->
+    <TextView
+        android:id="@+id/txtUsuarioEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="email@vaultbox.com"
+        android:textColor="@color/text_secondary"
+        android:textSize="13sp"
+        android:layout_marginBottom="4dp" />
+
+    <!-- Setor e Cargo -->
+    <TextView
+        android:id="@+id/txtUsuarioSetorCargo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Setor: TI • Cargo: Analista"
+        android:textColor="@color/text_primary"
+        android:textSize="13sp"
+        android:layout_marginBottom="10dp" />
+
+    <!-- Linha de Divisória e Ações -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#302747"
+        android:layout_marginBottom="8dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end">
+
+        <ImageButton
+            android:id="@+id/btnEditarUsuario"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Editar Usuário"
+            android:src="@drawable/ic_edit" />
+
+        <ImageButton
+            android:id="@+id/btnExcluirUsuario"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Excluir Usuário"
+            android:src="@drawable/ic_delete" />
+
+    </LinearLayout>
+
+</LinearLayout>
